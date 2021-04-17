@@ -4,6 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+class DividerLine extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Divider(color: mainColor);
+  }
+}
+
 class ContactDetails extends StatelessWidget {
   final Contact contact;
   const ContactDetails({this.contact});
@@ -176,7 +183,7 @@ class ContactDetails extends StatelessWidget {
                 );
               }),
             ),
-            DividerLine(),
+            //DividerLine(),
             Column(
               children: List.generate(contact.emails.length, (index) {
                 List<Item> emailsList = contact.emails.toList();
@@ -212,7 +219,7 @@ class ContactDetails extends StatelessWidget {
                 );
               }),
             ),
-            DividerLine(),
+            //DividerLine(),
             Column(
               children: List.generate(contact.postalAddresses.length, (index) {
                 List addressesList = contact.postalAddresses.toList();
@@ -252,12 +259,5 @@ class ContactDetails extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class DividerLine extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Divider(color: mainColor);
   }
 }
