@@ -1,4 +1,5 @@
 import 'package:contact_manager/constant/constant.dart';
+import 'package:contact_manager/widgets/calls_body.dart';
 import 'package:contact_manager/widgets/contacts_body.dart';
 import 'package:contact_manager/widgets/header_bar.dart';
 import 'package:contacts_service/contacts_service.dart';
@@ -53,7 +54,21 @@ class _InitialScreenState extends State<InitialScreen> {
         child: Column(
           children: [
             HeaderBar(),
-            ContactsBody(),
+            Expanded(
+              child: PageView(
+                controller: pageController,
+                onPageChanged: (index) {
+                  setState(() {
+                    pageIndex = index;
+                    nextPage;
+                  });
+                },
+                children: [
+                  ContactsBody(),
+                  CallsBody(),
+                ],
+              ),
+            ),
           ],
         ),
       ),

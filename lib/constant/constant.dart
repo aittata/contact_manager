@@ -7,7 +7,6 @@ const String appTitle = "True Call";
 ///TODO : Page Index
 int pageIndex;
 PageController pageController = PageController(initialPage: pageIndex);
-//Axis scrollDirection = Axis.horizontal;
 Duration duration = Duration(milliseconds: 1500);
 Curve curve = Curves.fastLinearToSlowEaseIn;
 
