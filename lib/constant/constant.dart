@@ -23,7 +23,7 @@ get nextPage async {
 ///TODO : App Color
 const Color mainColor = Color(0xFF00AAFF);
 const Color backColor = Color(0xFFF0F0F0);
-const Color lightColor = Color(0xFFFFFFFF);
+const Color lightColor = Color(0xFFF5F5F5);
 
 const Color lightTextColor = Colors.white;
 const Color darkTextColor = Colors.black54;

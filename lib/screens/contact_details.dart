@@ -56,9 +56,7 @@ class ContactDetails extends StatelessWidget {
                 ),
               ),
             ),
-            Divider(
-              color: mainColor,
-            ),
+            DividerLine(),
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -138,13 +136,11 @@ class ContactDetails extends StatelessWidget {
                 ],
               ),
             ),
-            Divider(
-              color: mainColor,
-            ),
+            DividerLine(),
             Column(
               children: List.generate(contact.phones.length, (index) {
                 List<Item> phonesList = contact.phones.toList();
-                String value = phonesList[index].value.toString();
+                var value = phonesList[index];
                 return Container(
                   decoration: BoxDecoration(
                     color: lightColor,
@@ -158,7 +154,7 @@ class ContactDetails extends StatelessWidget {
                       color: mainColor,
                     ),
                     title: Text(
-                      "$value",
+                      "${value.value}",
                       style: GoogleFonts.itim(
                         fontSize: 18,
                         color: darkTextColor,
@@ -166,7 +162,7 @@ class ContactDetails extends StatelessWidget {
                       ),
                     ),
                     subtitle: Text(
-                      "${phonesList[index].label}",
+                      "${value.label}",
                       style: GoogleFonts.itim(
                         color: darkTextColor,
                         fontWeight: FontWeight.bold,
@@ -179,10 +175,89 @@ class ContactDetails extends StatelessWidget {
                   ),
                 );
               }),
-            )
+            ),
+            DividerLine(),
+            Column(
+              children: List.generate(contact.emails.length, (index) {
+                List<Item> emailsList = contact.emails.toList();
+                var value = emailsList[index];
+                return Container(
+                  decoration: BoxDecoration(
+                    color: lightColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 2),
+                  child: ListTile(
+                    leading: Icon(
+                      CupertinoIcons.mail_solid,
+                      size: 30,
+                      color: mainColor,
+                    ),
+                    title: Text(
+                      "${value.value}",
+                      style: GoogleFonts.itim(
+                        fontSize: 18,
+                        color: darkTextColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "${value.label}",
+                      style: GoogleFonts.itim(
+                        color: darkTextColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
+              }),
+            ),
+            DividerLine(),
+            Column(
+              children: List.generate(contact.postalAddresses.length, (index) {
+                List addressesList = contact.postalAddresses.toList();
+                var value = addressesList[index];
+                return Container(
+                  decoration: BoxDecoration(
+                    color: lightColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 2),
+                  child: ListTile(
+                    leading: Icon(
+                      CupertinoIcons.location_solid,
+                      size: 30,
+                      color: mainColor,
+                    ),
+                    title: Text(
+                      "$value",
+                      style: GoogleFonts.itim(
+                        fontSize: 18,
+                        color: darkTextColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      "${value.label}",
+                      style: GoogleFonts.itim(
+                        color: darkTextColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                );
+              }),
+            ),
           ],
         ),
       ),
     );
+  }
+}
+
+class DividerLine extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Divider(color: mainColor);
   }
 }
