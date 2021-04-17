@@ -1,5 +1,5 @@
 import 'package:contact_manager/constant/constant.dart';
-import 'package:contact_manager/widgets/contain_body.dart';
+import 'package:contact_manager/widgets/contacts_body.dart';
 import 'package:contact_manager/widgets/header_bar.dart';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +45,7 @@ class _InitialScreenState extends State<InitialScreen> {
           style: GoogleFonts.itim(
             color: lightTextColor,
             fontSize: 20,
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -53,7 +53,7 @@ class _InitialScreenState extends State<InitialScreen> {
         child: Column(
           children: [
             HeaderBar(),
-            ContainBody(),
+            ContactsBody(),
           ],
         ),
       ),

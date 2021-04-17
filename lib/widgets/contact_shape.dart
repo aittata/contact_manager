@@ -38,7 +38,10 @@ class ContactShape extends StatelessWidget {
                   backgroundColor: mainColor,
                   child: Text(
                     "${contact.initials()}",
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900),
+                    style: TextStyle(
+                      color: lightTextColor,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
         ),
@@ -48,8 +51,8 @@ class ContactShape extends StatelessWidget {
             "${contact.displayName}",
             style: GoogleFonts.itim(
               fontSize: 18,
-              color: Colors.black54,
-              fontWeight: FontWeight.w900,
+              color: darkTextColor,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
