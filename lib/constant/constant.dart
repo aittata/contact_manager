@@ -1,3 +1,4 @@
+import 'package:call_log/call_log.dart';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
 
@@ -6,9 +7,9 @@ const String appTitle = "True Call";
 
 ///TODO : Page Index
 int pageIndex;
-PageController pageController = PageController(initialPage: pageIndex);
-Duration duration = Duration(milliseconds: 1500);
-Curve curve = Curves.fastLinearToSlowEaseIn;
+PageController pageController;
+Duration duration = Duration(milliseconds: 1000);
+Curve curve = Curves.easeInToLinear;
 
 ///TODO : Next Page
 nextPage(index) async {
@@ -32,5 +33,5 @@ const Color darkTextColor = Colors.black54;
 //double screenHeight = Device.screenHeight;
 
 List<Contact> contactsList = [];
-//List<CallLogEntry> callsList = [];
+List<CallLogEntry> callsList = [];
 //List<SmsLog> messageList = [];

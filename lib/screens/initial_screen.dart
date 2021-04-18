@@ -1,3 +1,4 @@
+import 'package:call_log/call_log.dart';
 import 'package:contact_manager/constant/constant.dart';
 import 'package:contact_manager/widgets/calls_body.dart';
 import 'package:contact_manager/widgets/contacts_body.dart';
@@ -19,6 +20,8 @@ class _InitialScreenState extends State<InitialScreen> {
   void initState() {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     super.initState();
+    pageIndex = 0;
+    pageController = PageController(initialPage: pageIndex);
     getContacts;
   }
 
@@ -31,6 +34,20 @@ class _InitialScreenState extends State<InitialScreen> {
         _contactsList = (await ContactsService.getContacts()).toList();
         setState(() {
           contactsList = _contactsList;
+        });
+      }
+    } catch (e) {}
+  }
+
+  bool isCallsGranted = true;
+  get getAllCalls async {
+    isCallsGranted = await Permission.phone.request().isGranted;
+    List<CallLogEntry> _callsList = [];
+    try {
+      if (isCallsGranted) {
+        _callsList = (await CallLog.get()).toList();
+        setState(() {
+          callsList = _callsList;
         });
       }
     } catch (e) {}
@@ -64,8 +81,8 @@ class _InitialScreenState extends State<InitialScreen> {
                   });
                 },
                 children: [
-                  ContactsBody(),
                   CallsBody(),
+                  ContactsBody(),
                 ],
               ),
             ),

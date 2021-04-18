@@ -22,22 +22,22 @@ class _HeaderBarState extends State<HeaderBar> {
         children: [
           HeaderButton(
             index: 0,
-            icon: CupertinoIcons.person_2_fill,
-            title: "Contact",
+            icon: CupertinoIcons.phone_fill,
+            title: "History",
             onPressed: () {
               setState(() {
-                pageIndex = 0;
+                pageIndex = 1;
                 nextPage(pageIndex);
               });
             },
           ),
           HeaderButton(
             index: 1,
-            icon: CupertinoIcons.phone_fill,
-            title: "History",
+            icon: CupertinoIcons.person_2_fill,
+            title: "Contact",
             onPressed: () {
               setState(() {
-                pageIndex = 1;
+                pageIndex = 0;
                 nextPage(pageIndex);
               });
             },
