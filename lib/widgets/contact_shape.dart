@@ -1,5 +1,5 @@
 import 'package:contact_manager/constant/constant.dart';
-import 'package:contact_manager/screens/contact_details.dart';
+import 'package:contact_manager/widgets/contact_details.dart';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

@@ -60,7 +60,7 @@ class _InitialScreenState extends State<InitialScreen> {
                 onPageChanged: (index) {
                   setState(() {
                     pageIndex = index;
-                    nextPage;
+                    nextPage(pageIndex);
                   });
                 },
                 children: [

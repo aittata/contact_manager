@@ -183,7 +183,6 @@ class ContactDetails extends StatelessWidget {
                 );
               }),
             ),
-            //DividerLine(),
             Column(
               children: List.generate(contact.emails.length, (index) {
                 List<Item> emailsList = contact.emails.toList();
@@ -219,7 +218,6 @@ class ContactDetails extends StatelessWidget {
                 );
               }),
             ),
-            //DividerLine(),
             Column(
               children: List.generate(contact.postalAddresses.length, (index) {
                 List addressesList = contact.postalAddresses.toList();
@@ -255,6 +253,36 @@ class ContactDetails extends StatelessWidget {
                 );
               }),
             ),
+            if (contact.jobTitle != null && contact.company != null)
+              Container(
+                decoration: BoxDecoration(
+                  color: lightColor,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                margin: EdgeInsets.symmetric(vertical: 2),
+                child: ListTile(
+                  leading: Icon(
+                    CupertinoIcons.bag_fill,
+                    size: 30,
+                    color: mainColor,
+                  ),
+                  title: Text(
+                    "${contact.jobTitle}",
+                    style: GoogleFonts.itim(
+                      fontSize: 18,
+                      color: darkTextColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "${contact.company}",
+                    style: GoogleFonts.itim(
+                      color: darkTextColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
       ),

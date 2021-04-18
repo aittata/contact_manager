@@ -11,9 +11,9 @@ Duration duration = Duration(milliseconds: 1500);
 Curve curve = Curves.fastLinearToSlowEaseIn;
 
 ///TODO : Next Page
-get nextPage async {
+nextPage(index) async {
   pageController.animateToPage(
-    pageIndex,
+    index,
     duration: duration,
     curve: curve,
   );

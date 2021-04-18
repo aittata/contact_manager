@@ -27,7 +27,7 @@ class _HeaderBarState extends State<HeaderBar> {
             onPressed: () {
               setState(() {
                 pageIndex = 0;
-                nextPage;
+                nextPage(pageIndex);
               });
             },
           ),
@@ -38,7 +38,7 @@ class _HeaderBarState extends State<HeaderBar> {
             onPressed: () {
               setState(() {
                 pageIndex = 1;
-                nextPage;
+                nextPage(pageIndex);
               });
             },
           ),
