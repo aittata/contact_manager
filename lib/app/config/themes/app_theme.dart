@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static const Color incomeColor = Color(0xff08ff00);
-  static const Color expenseColor = Color(0xfffd0000);
-
   static const Color mainColor = Color(0xFF00AAFF);
+  // static const Color mainColor = Color(0xAF000000);
   static const Color backgroundColor = Color(0xFFF0F0F0);
   static const Color backgroundImageColor = Color(0xFFFFFFFF);
   static const Color primaryBackColor = Color(0xFFFFFFFF);
@@ -30,7 +28,7 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         elevation: 0,
         centerTitle: true,
-        backgroundColor: AppTheme.mainColor,
+        backgroundColor: AppTheme.secondaryBackColor.withOpacity(.75),
         titleTextStyle: TextStyle(
           color: AppTheme.secondaryTextColor,
           fontWeight: FontWeight.w900,
