@@ -4,8 +4,7 @@ class AppTheme {
   AppTheme._();
 
   static const Color mainColor = Color(0xFF00AAFF);
-  // static const Color mainColor = Color(0xAF000000);
-  static const Color backgroundColor = Color(0xFFF0F0F0);
+  static const Color backgroundColor = Color(0xFFDEDEDE);
   static const Color backgroundImageColor = Color(0xFFFFFFFF);
   static const Color primaryBackColor = Color(0xFFFFFFFF);
   static const Color secondaryBackColor = Color(0xFF000000);
@@ -28,9 +27,9 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         elevation: 0,
         centerTitle: true,
-        backgroundColor: AppTheme.secondaryBackColor.withOpacity(.75),
+        backgroundColor: AppTheme.primaryBackColor,
         titleTextStyle: TextStyle(
-          color: AppTheme.secondaryTextColor,
+          color: AppTheme.primaryTextColor,
           fontWeight: FontWeight.w900,
           fontSize: 20,
         ),
