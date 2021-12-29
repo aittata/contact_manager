@@ -1,20 +1,17 @@
+import 'package:contact_manager/app/modules/initial/providers/initial_provider.dart';
 import 'package:get/get.dart';
 
 class InitialController extends GetxController {
-  //TODO: Implement InitialController
+  final InitialProvider _provider = Get.put(InitialProvider());
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    loadContacts;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  get loadContacts async {
+    var data = await _provider.getContacts;
+    print(data);
   }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
 }
