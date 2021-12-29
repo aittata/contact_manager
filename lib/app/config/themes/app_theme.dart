@@ -25,7 +25,7 @@ class AppTheme {
       primaryColor: AppTheme.backgroundColor,
       splashColor: AppTheme.backgroundColor,
       appBarTheme: AppBarTheme(
-        elevation: 0,
+        elevation: 1,
         centerTitle: true,
         backgroundColor: AppTheme.primaryBackColor,
         titleTextStyle: TextStyle(

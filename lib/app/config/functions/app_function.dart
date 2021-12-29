@@ -9,22 +9,6 @@ import 'package:get/get.dart';
 class AppFunction {
   AppFunction._();
 
-  // static lunchNew(context, {required Widget builder}) {
-  //   return showCupertinoModalPopup(
-  //     barrierColor: AppTheme.secondaryBackColor.withOpacity(.5),
-  //     context: context,
-  //     builder: (context) => builder,
-  //   );
-  // }
-
-  // static loadCount(List myList, int state) {
-  //   try {
-  //     return myList.where((transaction) => transaction.state == state).toList().map((transaction) => transaction.amount).reduce((a, b) => a! + b!);
-  //   } catch (e) {
-  //     return 0.0;
-  //   }
-  // }
-
   static int get getRandomColor => Color(Random().nextInt(0xFFFFFFFF)).withAlpha(0xFF).value;
 
   //static String dateShape(DateTime date) => DateFormat('MMM dd, yyyy').format(date);
