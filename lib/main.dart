@@ -18,11 +18,11 @@ class ContactManager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: AppMessage.appTitle,
-      theme: AppTheme.themeData,
-      getPages: AppPages.routes,
-      initialRoute: AppPages.INITIAL,
+      // debugShowCheckedModeBanner: false,
+      // title: AppMessage.appTitle,
+      // theme: AppTheme.themeData,
+      // getPages: AppPages.routes,
+      // initialRoute: AppPages.INITIAL,
     );
   }
 }
