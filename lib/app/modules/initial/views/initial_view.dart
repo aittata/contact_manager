@@ -1,3 +1,4 @@
+import 'package:contact_manager/app/config/messages/app_message.dart';
 import 'package:contact_manager/app/modules/initial/controllers/initial_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,20 +16,20 @@ class _InitialViewState extends State<InitialView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.yellow,
-        //title: Text(AppMessage.appTitle),
-        // flexibleSpace: Container(
-        //   width: 100,
-        //   //height: 40,
-        //   color: Colors.red,
-        // ),
-        bottom: PreferredSize(
-          preferredSize: Size(0, 0),
-          child: Container(
-            //color: Colors.blue,
-            child: Text("hello"),
-            //height: 20,
-          ),
+        title: Text(AppMessage.appTitle),
+        flexibleSpace: Container(
+          // width: 100,
+          // height: 56,
+          color: Colors.red,
         ),
+        // bottom: PreferredSize(
+        //   preferredSize: Size(56, 0),
+        //   child: Container(
+        //     //color: Colors.blue,
+        //     child: Text("hello"),
+        //     //height: 20,
+        //   ),
+        // ),
       ),
     );
   }
