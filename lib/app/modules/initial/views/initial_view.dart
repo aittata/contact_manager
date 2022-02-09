@@ -14,22 +14,19 @@ class _InitialViewState extends State<InitialView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.red,
         title: Text(AppMessage.appTitle),
-        flexibleSpace: Container(
-          // width: 100,
-          // height: 56,
-          color: Colors.red,
+        bottom: PreferredSize(
+          preferredSize: Size(0, 0),
+          child: Container(
+            color: Colors.blue,
+            child: Text("hello"),
+            // height: 50,
+            width: double.infinity,
+          ),
         ),
-        // bottom: PreferredSize(
-        //   preferredSize: Size(56, 0),
-        //   child: Container(
-        //     //color: Colors.blue,
-        //     child: Text("hello"),
-        //     //height: 20,
-        //   ),
-        // ),
       ),
     );
   }
