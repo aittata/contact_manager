@@ -14,19 +14,8 @@ class _InitialViewState extends State<InitialView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.red,
         title: Text(AppMessage.appTitle),
-        bottom: PreferredSize(
-          preferredSize: Size(0, 0),
-          child: Container(
-            color: Colors.blue,
-            child: Text("hello"),
-            // height: 50,
-            width: double.infinity,
-          ),
-        ),
       ),
     );
   }
