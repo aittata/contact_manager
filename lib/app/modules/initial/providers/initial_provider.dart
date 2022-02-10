@@ -1,4 +1,3 @@
-import 'package:contact_manager/app/modules/initial/models/contacts.dart';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -15,24 +14,11 @@ class InitialProvider extends GetConnect {
     return permissionStatus;
   }
 
-  Future<List<Contacts>> get getContacts async {
-    List<Contacts> myList = [];
+  get getContacts async {
     final PermissionStatus permissionStatus = await _getPermission;
     if (permissionStatus.isGranted) {
       final Iterable<Contact> contacts = await ContactsService.getContacts();
-      for (var contact in contacts) {
-        for (var phone in contact.phones!) {
-          print(phone.value);
-          myList.add(
-            Contacts(
-              photo: contact.avatar,
-              name: contact.displayName,
-              phone: phone.value,
-            ),
-          );
-        }
-      }
+      return contacts;
     }
-    return myList;
   }
 }
