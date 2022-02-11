@@ -7,11 +7,11 @@ class InitialProvider extends GetConnect {
   void onInit() {}
 
   get _getPermission async {
-    PermissionStatus permissionStatus = await Permission.contacts.status;
-    if (!permissionStatus.isGranted && !permissionStatus.isPermanentlyDenied) {
-      permissionStatus = await Permission.contacts.request();
-    }
-    return permissionStatus;
+    // PermissionStatus permissionStatus = await Permission.contacts.status;
+    // if (!permissionStatus.isGranted && !permissionStatus.isPermanentlyDenied) {
+    //   permissionStatus = await Permission.contacts.request();
+    // }
+    // return permissionStatus;
   }
 
   get getContacts async {
