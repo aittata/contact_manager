@@ -25,7 +25,22 @@ class InitialView extends StatelessWidget {
           if (isEmpty) {
             return EmptyBox();
           } else {
-            return Center(child: Text(contacts.length.toString()));
+            return ListView.builder(
+              itemCount: contacts.length,
+              itemBuilder: (context, i) {
+                final Contact contact = contacts[i];
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  child: ListTile(
+                    title: Text(contact.displayName!),
+                  ),
+                );
+              },
+            );
+            // return Center(child: Text(contacts.length.toString()));
           }
         }
       }),
