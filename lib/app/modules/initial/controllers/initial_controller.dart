@@ -15,7 +15,7 @@ class InitialController extends GetxController {
 
   get _getContacts async {
     state.value = true;
-    contacts = await _provider.getContacts;
+    contacts.value = await _provider.getContacts;
     state.value = false;
   }
 }
