@@ -17,7 +17,7 @@ class AppFunction {
   //   return myList.where((category) => category.title == value).toList()[0].id;
   // }
 
-  static snackBar({required String title, required String message}) {
+  static snackBar({@required String title, @required String message}) {
     return Get.snackbar(
       title,
       message,

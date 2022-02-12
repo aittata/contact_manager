@@ -13,7 +13,7 @@ void main() {
 }
 
 class ContactManager extends StatelessWidget {
-  const ContactManager({Key? key}) : super(key: key);
+  const ContactManager({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,7 @@ name: contact_manager
 version: 1.0.0+1
 description: Contact Manager
 environment: 
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.7.0 <3.0.0'
 
 dependencies: 
   get: 4.6.1

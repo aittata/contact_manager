@@ -6,10 +6,10 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class BouncePoint extends StatelessWidget {
   final bool state;
   final double size;
-  final Color? color;
+  final Color color;
 
   const BouncePoint({
-    Key? key,
+    Key key,
     this.state = true,
     this.size = 30,
     this.color,

@@ -1,10 +1,9 @@
 import 'dart:io';
 
-
 class AppResponse {
   final bool success;
-  final String? messageServer;
-  final String? messageUser;
+  final String messageServer;
+  final String messageUser;
   final dynamic response;
 
   const AppResponse({
