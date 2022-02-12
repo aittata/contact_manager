@@ -1,6 +1,7 @@
 import 'package:contact_manager/app/config/messages/app_message.dart';
 import 'package:contact_manager/app/modules/initial/controllers/initial_controller.dart';
 import 'package:contact_manager/app/modules/initial/widgets/bounce_point.dart';
+import 'package:contact_manager/app/modules/initial/widgets/contact_shape.dart';
 import 'package:contact_manager/app/modules/initial/widgets/empty_box.dart';
 import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
@@ -26,18 +27,13 @@ class InitialView extends StatelessWidget {
             return EmptyBox();
           } else {
             return ListView.builder(
+              shrinkWrap: true,
+              padding: EdgeInsets.all(10),
+              physics: BouncingScrollPhysics(),
               itemCount: contacts.length,
               itemBuilder: (context, i) {
                 final Contact contact = contacts[i];
-                return Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(25),
-                  ),
-                  child: ListTile(
-                    title: Text(contact.displayName!),
-                  ),
-                );
+                return ContactShape(contact: contact);
               },
             );
             // return Center(child: Text(contacts.length.toString()));
