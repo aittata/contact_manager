@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'app/config/functions/app_function.dart';
 import 'app/config/messages/app_message.dart';
 import 'app/config/themes/app_theme.dart';
-import 'app/routes/app_pages.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +21,7 @@ class ContactManager extends StatelessWidget {
       title: AppMessage.appTitle,
       theme: AppTheme.themeData,
       // getPages: AppPages.routes,
-      initialRoute: AppPages.INITIAL,
+      // initialRoute: AppPages.INITIAL,
     );
   }
 }
