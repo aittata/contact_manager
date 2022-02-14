@@ -22,7 +22,7 @@ class ContactManager extends StatelessWidget {
       title: AppMessage.appTitle,
       theme: AppTheme.themeData,
       getPages: AppPages.routes,
-      initialRoute: AppPages.INITIAL,
+      // initialRoute: AppPages.INITIAL,
     );
   }
 }
