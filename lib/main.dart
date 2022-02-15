@@ -21,8 +21,8 @@ class ContactManager extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: AppMessage.appTitle,
       theme: AppTheme.themeData,
-      getPages: AppPages.routes,
-      // initialRoute: AppPages.INITIAL,
+      // getPages: AppPages.routes,
+      initialRoute: AppPages.INITIAL,
     );
   }
 }
