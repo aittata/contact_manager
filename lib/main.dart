@@ -7,7 +7,7 @@ import 'app/config/themes/app_theme.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   AppFunction.configureDependencies;
   runApp(ContactManager());
 }
